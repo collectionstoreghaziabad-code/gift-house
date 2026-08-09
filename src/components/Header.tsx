@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Menu, X, ChevronDown, FileText, Gift, Sparkles, Building, Briefcase, BookOpen, Layers } from 'lucide-react';
+import { Search, Menu, X, ChevronDown, FileText, Gift, Sparkles, Building, Briefcase, BookOpen, Layers, Phone, MapPin, MessageCircle } from 'lucide-react';
 import { useQuoteModal } from '../context/QuoteModalContext';
 import { CATEGORIES } from '../data/categories';
 import { BrandLogo } from './BrandLogo';
@@ -25,6 +25,35 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
 
   return (
     <header className="sticky top-0 z-40 bg-[#0a0a0a]/95 backdrop-blur-md border-b border-[#262626] text-[#e5e5e5]">
+      {/* Top Utility Contact Bar */}
+      <div className="bg-[#121212] border-b border-[#262626]/60 text-[11px] py-1.5 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-[#a3a3a3]">
+          <div className="flex items-center gap-3 sm:gap-4 flex-wrap justify-center sm:justify-start">
+            <div className="flex items-center gap-1.5 text-[#d4af37]">
+              <MapPin className="w-3 h-3 flex-shrink-0" />
+              <span className="font-medium">Ghaziabad, New Delhi (NCR)</span>
+            </div>
+            <span className="hidden sm:inline text-[#333]">|</span>
+            <div className="flex items-center gap-2">
+              <Phone className="w-3 h-3 text-[#d4af37] flex-shrink-0" />
+              <a href="tel:7895019181" className="hover:text-white transition-colors">+91 78950 19181</a>
+              <span>/</span>
+              <a href="tel:9311141048" className="hover:text-white transition-colors">+91 93111 41048</a>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 font-mono text-[10px] tracking-wider uppercase">
+            <a 
+              href="https://wa.me/917895019181?text=Hello%20The%20Gifting%20House,%20I%20have%20a%20corporate%20gifting%20enquiry." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#25D366] hover:underline flex items-center gap-1 font-sans font-semibold"
+            >
+              <MessageCircle className="w-3 h-3 fill-current" /> WhatsApp B2B Support
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         
         {/* Left: Brand Logo */}

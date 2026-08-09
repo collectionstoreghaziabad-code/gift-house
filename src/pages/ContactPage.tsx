@@ -69,7 +69,11 @@ export const ContactPage: React.FC = () => {
               <Phone className="w-5 h-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
               <div>
                 <div className="font-semibold text-white">Call / Corporate Helpline</div>
-                <div className="text-[#a3a3a3] mt-0.5">+91 98765 43210 / +91 11 4567 8900</div>
+                <div className="text-[#a3a3a3] mt-0.5 flex flex-wrap gap-2">
+                  <a href="tel:7895019181" className="hover:text-[#d4af37] transition-colors">+91 78950 19181</a>
+                  <span>/</span>
+                  <a href="tel:9311141048" className="hover:text-[#d4af37] transition-colors">+91 93111 41048</a>
+                </div>
                 <div className="text-[10px] text-[#737373] mt-1">Mon - Sat: 9:30 AM to 6:30 PM IST</div>
               </div>
             </div>
@@ -78,22 +82,33 @@ export const ContactPage: React.FC = () => {
               <MessageCircle className="w-5 h-5 text-[#25D366] flex-shrink-0 mt-0.5" />
               <div>
                 <div className="font-semibold text-white">WhatsApp Business Desk</div>
-                <a 
-                  href="https://wa.me/919876543210?text=Hello%20The%20Gifting%20House,%20I%20am%20interested%20in%20corporate%20gifting."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#25D366] hover:underline block mt-0.5"
-                >
-                  Chat with a Gifting Advisor →
-                </a>
+                <div className="flex flex-col gap-1 mt-1 text-xs">
+                  <a 
+                    href="https://wa.me/917895019181?text=Hello%20The%20Gifting%20House,%20I%20am%20interested%20in%20corporate%20gifting."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#25D366] hover:underline"
+                  >
+                    Chat on +91 78950 19181 →
+                  </a>
+                  <a 
+                    href="https://wa.me/919311141048?text=Hello%20The%20Gifting%20House,%20I%20am%20interested%20in%20corporate%20gifting."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#25D366] hover:underline"
+                  >
+                    Chat on +91 93111 41048 →
+                  </a>
+                </div>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-4 bg-[#0a0a0a] rounded-lg border border-[#262626]">
               <MapPin className="w-5 h-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
               <div>
-                <div className="font-semibold text-white">Corporate Experience Hubs</div>
-                <div className="text-[#a3a3a3] mt-0.5">New Delhi • Mumbai • Bengaluru</div>
+                <div className="font-semibold text-white">Office & Location</div>
+                <div className="text-[#a3a3a3] mt-0.5">Ghaziabad, New Delhi (NCR)</div>
+                <div className="text-[10px] text-[#737373] mt-1">Servicing Pan-India Corporate Clients</div>
               </div>
             </div>
           </div>
@@ -163,7 +178,7 @@ export const ContactPage: React.FC = () => {
                   <input
                     type="tel"
                     required
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 78950 19181"
                     value={formData.phone}
                     onChange={e => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full bg-[#0a0a0a] border border-[#333] focus:border-[#d4af37] rounded px-3 py-2 text-white outline-none"
@@ -174,7 +189,7 @@ export const ContactPage: React.FC = () => {
                   <label className="block text-[#a3a3a3] mb-1 font-medium">City / Location</label>
                   <input
                     type="text"
-                    placeholder="e.g. Mumbai / Delhi NCR"
+                    placeholder="e.g. Ghaziabad / Delhi NCR"
                     value={formData.city}
                     onChange={e => setFormData({ ...formData, city: e.target.value })}
                     className="w-full bg-[#0a0a0a] border border-[#333] focus:border-[#d4af37] rounded px-3 py-2 text-white outline-none"

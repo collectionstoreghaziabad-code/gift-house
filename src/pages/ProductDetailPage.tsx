@@ -38,7 +38,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId,
     .slice(0, 4);
 
   const whatsappMessage = `Hello The Gifting House, I am interested in ${product.name} (Code: ${product.code}). Please send me bulk pricing and logo customization details.`;
-  const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/917895019181?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="bg-[#0a0a0a] text-[#e5e5e5] min-h-screen py-10 px-4 sm:px-6 lg:px-8 space-y-12">

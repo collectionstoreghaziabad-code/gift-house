@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               REQUEST A QUOTE
             </button>
             <a
-              href="https://wa.me/919876543210?text=Hello%20The%20Gifting%20House,%20I%20would%20like%20to%20request%20a%20quote"
+              href="https://wa.me/917895019181?text=Hello%20The%20Gifting%20House,%20I%20would%20like%20to%20request%20a%20quote"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[#262626] hover:bg-[#333] text-white font-medium text-xs tracking-wider uppercase rounded border border-[#333] transition-colors flex items-center gap-2"
@@ -61,15 +61,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-2 text-[11px] text-[#a3a3a3] pt-2">
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
-              <span>corporate@thegiftinghouse.com</span>
+              <a href="mailto:corporate@thegiftinghouse.com" className="hover:text-white transition-colors">corporate@thegiftinghouse.com</a>
+            </div>
+            <div className="flex items-start gap-2">
+              <Phone className="w-3.5 h-3.5 text-[#d4af37] mt-0.5 flex-shrink-0" />
+              <div className="flex flex-col">
+                <a href="tel:7895019181" className="hover:text-white transition-colors">+91 78950 19181</a>
+                <a href="tel:9311141048" className="hover:text-white transition-colors">+91 93111 41048</a>
+              </div>
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#d4af37]" />
-              <span>+91 98765 43210</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-[#d4af37]" />
-              <span>New Delhi • Mumbai • Bengaluru</span>
+              <MapPin className="w-3.5 h-3.5 text-[#d4af37] flex-shrink-0" />
+              <span>Ghaziabad, New Delhi (NCR)</span>
             </div>
           </div>
         </div>
@@ -159,7 +162,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </h3>
           <div className="space-y-2 text-[#a3a3a3]">
             <a 
-              href="https://wa.me/919876543210" 
+              href="https://wa.me/917895019181?text=Hello%20The%20Gifting%20House,%20I%20would%20like%20to%20request%20a%20corporate%20quote." 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-[#25D366] transition-colors"
