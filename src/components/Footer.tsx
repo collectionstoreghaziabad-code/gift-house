@@ -61,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-2 text-[11px] text-[#a3a3a3] pt-2">
             <div className="flex items-center gap-2">
               <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
-              <a href="mailto:corporate@thegiftinghouse.com" className="hover:text-white transition-colors">corporate@thegiftinghouse.com</a>
+              <a href="mailto:sayhellototgh@gmail.com" className="hover:text-white transition-colors">sayhellototgh@gmail.com</a>
             </div>
             <div className="flex items-start gap-2">
               <Phone className="w-3.5 h-3.5 text-[#d4af37] mt-0.5 flex-shrink-0" />
@@ -167,17 +167,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-[#25D366] transition-colors"
             >
-              WhatsApp Us <ArrowUpRight className="w-3 h-3" />
+              WhatsApp Us <ArrowUpRight className="w-3 h-3 text-[#25D366]" />
             </a>
-            <div className="flex items-center gap-1.5 hover:text-white cursor-pointer">
-              Instagram <ArrowUpRight className="w-3 h-3" />
-            </div>
-            <div className="flex items-center gap-1.5 hover:text-white cursor-pointer">
-              LinkedIn <ArrowUpRight className="w-3 h-3" />
-            </div>
-            <div className="flex items-center gap-1.5 hover:text-white cursor-pointer">
-              Facebook <ArrowUpRight className="w-3 h-3" />
-            </div>
+            <a 
+              href="https://www.instagram.com/thegiftinghouse_?igsh=ZTJ1ODlhZHFuMHA=" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-[#E1306C] transition-colors"
+            >
+              Instagram (@thegiftinghouse_) <ArrowUpRight className="w-3 h-3 text-[#E1306C]" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/tgh-the-gift-house-159174428/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-[#0A66C2] transition-colors"
+            >
+              LinkedIn <ArrowUpRight className="w-3 h-3 text-[#0A66C2]" />
+            </a>
+            <a 
+              href="https://www.facebook.com/profile.php?id=61592901518547" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:text-[#1877F2] transition-colors"
+            >
+              Facebook <ArrowUpRight className="w-3 h-3 text-[#1877F2]" />
+            </a>
           </div>
           <div className="mt-6 p-3 bg-[#171717] rounded border border-[#262626] text-[10px] text-[#737373]">
             B2B Procurement & Bulk Orders Only. Minimum Order Quantities apply for logo printing.

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Menu, X, ChevronDown, FileText, Gift, Sparkles, Building, Briefcase, BookOpen, Layers, Phone, MapPin, MessageCircle } from 'lucide-react';
+import { Search, Menu, X, ChevronDown, FileText, Gift, Sparkles, Building, Briefcase, BookOpen, Layers, Phone, MapPin, MessageCircle, Mail } from 'lucide-react';
 import { useQuoteModal } from '../context/QuoteModalContext';
 import { CATEGORIES } from '../data/categories';
 import { BrandLogo } from './BrandLogo';
@@ -39,6 +39,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
               <a href="tel:7895019181" className="hover:text-white transition-colors">+91 78950 19181</a>
               <span>/</span>
               <a href="tel:9311141048" className="hover:text-white transition-colors">+91 93111 41048</a>
+            </div>
+            <span className="hidden sm:inline text-[#333]">|</span>
+            <div className="flex items-center gap-1.5">
+              <Mail className="w-3 h-3 text-[#d4af37] flex-shrink-0" />
+              <a href="mailto:sayhellototgh@gmail.com" className="hover:text-white transition-colors">sayhellototgh@gmail.com</a>
             </div>
           </div>
           <div className="flex items-center gap-3 font-mono text-[10px] tracking-wider uppercase">

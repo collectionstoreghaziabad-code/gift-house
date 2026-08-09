@@ -60,7 +60,7 @@ export const ContactPage: React.FC = () => {
               <Mail className="w-5 h-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
               <div>
                 <div className="font-semibold text-white">Email Procurement Desk</div>
-                <div className="text-[#a3a3a3] mt-0.5">corporate@thegiftinghouse.com</div>
+                <a href="mailto:sayhellototgh@gmail.com" className="text-[#a3a3a3] hover:text-[#d4af37] transition-colors mt-0.5 block">sayhellototgh@gmail.com</a>
                 <div className="text-[10px] text-[#737373] mt-1">Proposal responses within 24 business hours</div>
               </div>
             </div>
@@ -109,6 +109,51 @@ export const ContactPage: React.FC = () => {
                 <div className="font-semibold text-white">Office & Location</div>
                 <div className="text-[#a3a3a3] mt-0.5">Ghaziabad, New Delhi (NCR)</div>
                 <div className="text-[10px] text-[#737373] mt-1">Servicing Pan-India Corporate Clients</div>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="p-4 bg-[#0a0a0a] rounded-lg border border-[#262626] space-y-3">
+              <div className="font-semibold text-white text-xs uppercase tracking-wider text-[#d4af37]">
+                Connect With Us On Social Media
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <a
+                  href="https://www.instagram.com/thegiftinghouse_?igsh=ZTJ1ODlhZHFuMHA="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 bg-[#141414] hover:bg-[#1f1f1f] border border-[#262626] rounded flex items-center justify-between text-[#e5e5e5] hover:text-[#E1306C] transition-colors"
+                >
+                  <span className="font-medium">Instagram</span>
+                  <span className="text-[10px] font-mono text-[#737373]">@thegiftinghouse_</span>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61592901518547"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 bg-[#141414] hover:bg-[#1f1f1f] border border-[#262626] rounded flex items-center justify-between text-[#e5e5e5] hover:text-[#1877F2] transition-colors"
+                >
+                  <span className="font-medium">Facebook</span>
+                  <span className="text-[10px] font-mono text-[#737373]">Page</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/tgh-the-gift-house-159174428/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 bg-[#141414] hover:bg-[#1f1f1f] border border-[#262626] rounded flex items-center justify-between text-[#e5e5e5] hover:text-[#0A66C2] transition-colors"
+                >
+                  <span className="font-medium">LinkedIn</span>
+                  <span className="text-[10px] font-mono text-[#737373]">Profile</span>
+                </a>
+                <a
+                  href="https://wa.me/917895019181?text=Hello%20The%20Gifting%20House,%20I%20am%20interested%20in%20corporate%20gifting."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 bg-[#141414] hover:bg-[#1f1f1f] border border-[#262626] rounded flex items-center justify-between text-[#e5e5e5] hover:text-[#25D366] transition-colors"
+                >
+                  <span className="font-medium">WhatsApp</span>
+                  <span className="text-[10px] font-mono text-[#25D366]">+91 78950</span>
+                </a>
               </div>
             </div>
           </div>
