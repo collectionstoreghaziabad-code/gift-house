@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PRODUCTS } from '../data/products';
 import { CATEGORIES } from '../data/categories';
 import { ProductCard } from '../components/ProductCard';
@@ -14,14 +14,62 @@ interface HomePageProps {
   onNavigate: (path: string) => void;
 }
 
+// Reusable interactive GlowCard component with subtle mouse spotlight tracking
+const GlowCard: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}> = ({ children, className = '', onClick }) => {
+  const [cardMousePos, setCardMousePos] = useState({ x: -1000, y: -1000 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setCardMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+  return (
+    <div
+      onClick={onClick}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`relative overflow-hidden group transition-all duration-300 ${className}`}
+    >
+      {/* Subtle Card Spotlight Inner Glow */}
+      <div
+        className="pointer-events-none absolute inset-0 transition-opacity duration-300 z-10"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          background: `radial-gradient(160px circle at ${cardMousePos.x}px ${cardMousePos.y}px, rgba(212, 175, 55, 0.09), transparent 80%)`,
+        }}
+      />
+      {/* Subtle Card Edge Border Spotlight */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-xl transition-opacity duration-300 z-20 border border-[#d4af37]/60"
+        style={{
+          opacity: isHovered ? 1 : 0,
+          maskImage: `radial-gradient(120px circle at ${cardMousePos.x}px ${cardMousePos.y}px, black, transparent)`,
+          WebkitMaskImage: `radial-gradient(120px circle at ${cardMousePos.x}px ${cardMousePos.y}px, black, transparent)`,
+        }}
+      />
+      <div className="relative z-0 h-full">{children}</div>
+    </div>
+  );
+};
+
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   const { openQuoteModal } = useQuoteModal();
 
   const featuredProducts = PRODUCTS.filter(p => p.isFeatured || p.isPremium).slice(0, 8);
-  const executiveProducts = PRODUCTS.filter(p => p.isPremium || p.price && p.price > 1000).slice(0, 4);
+  const executiveProducts = PRODUCTS.filter(p => p.isPremium || (p.price && p.price > 1000)).slice(0, 4);
 
   return (
-    <div className="space-y-20 bg-[#0a0a0a] text-[#e5e5e5]">
+    <div className="relative space-y-20 bg-[#0a0a0a] text-[#e5e5e5]">
+      
       
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#141414] via-[#0a0a0a] to-[#0a0a0a] px-4 sm:px-6 lg:px-8 py-16 border-b border-[#262626]">
@@ -57,10 +105,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               Premium B2B corporate gifting solutions tailored for employee onboarding, VIP client appreciation, CXO executive suites, and festive occasions with high-precision custom logo engraving.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3.5 pt-2">
               <button
                 onClick={() => onNavigate('/products')}
-                className="px-8 py-4 bg-[#d4af37] hover:bg-[#c5a028] text-black font-bold text-xs tracking-widest uppercase rounded shadow-xl transition-all hover:scale-105 flex items-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 bg-[#d4af37] hover:bg-[#c5a028] active:bg-[#b8860b] text-black font-bold text-xs tracking-widest uppercase rounded shadow-xl transition-all hover:scale-[1.02] flex items-center justify-center gap-2 min-h-[44px]"
               >
                 EXPLORE PRODUCTS
                 <ArrowRight className="w-4 h-4" />
@@ -68,7 +116,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
               <button
                 onClick={() => openQuoteModal(null)}
-                className="px-8 py-4 bg-[#171717] hover:bg-[#262626] text-white font-semibold text-xs tracking-widest uppercase rounded border border-[#333] transition-all hover:border-[#d4af37]/50 flex items-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 bg-[#171717] hover:bg-[#262626] active:bg-[#333] text-white font-semibold text-xs tracking-widest uppercase rounded border border-[#333] transition-all hover:border-[#d4af37]/50 flex items-center justify-center gap-2 min-h-[44px]"
               >
                 REQUEST A QUOTE
               </button>
@@ -218,7 +266,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Card 1 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/50 rounded-xl p-6 space-y-4 hover:-translate-y-1 transition-all">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 space-y-4 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
                 <Users className="w-5 h-5" />
               </div>
@@ -232,10 +280,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 EXPLORE WELCOME KITS <ArrowRight className="w-3.5 h-3.5" />
               </button>
-            </div>
+            </GlowCard>
 
             {/* Card 2 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/50 rounded-xl p-6 space-y-4 hover:-translate-y-1 transition-all">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 space-y-4 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
                 <Crown className="w-5 h-5" />
               </div>
@@ -249,10 +297,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 EXPLORE EXECUTIVE GIFTS <ArrowRight className="w-3.5 h-3.5" />
               </button>
-            </div>
+            </GlowCard>
 
             {/* Card 3 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/50 rounded-xl p-6 space-y-4 hover:-translate-y-1 transition-all">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 space-y-4 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
                 <Award className="w-5 h-5" />
               </div>
@@ -266,10 +314,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 EXPLORE RECOGNITION GIFTS <ArrowRight className="w-3.5 h-3.5" />
               </button>
-            </div>
+            </GlowCard>
 
             {/* Card 4 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/50 rounded-xl p-6 space-y-4 hover:-translate-y-1 transition-all">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 space-y-4 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
                 <Calendar className="w-5 h-5" />
               </div>
@@ -283,10 +331,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 EXPLORE EVENT MERCHANDISE <ArrowRight className="w-3.5 h-3.5" />
               </button>
-            </div>
+            </GlowCard>
 
             {/* Card 5 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/50 rounded-xl p-6 space-y-4 hover:-translate-y-1 transition-all">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 space-y-4 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
                 <Heart className="w-5 h-5" />
               </div>
@@ -300,10 +348,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 EXPLORE FESTIVE GIFTS <ArrowRight className="w-3.5 h-3.5" />
               </button>
-            </div>
+            </GlowCard>
 
             {/* Card 6 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/50 rounded-xl p-6 space-y-4 hover:-translate-y-1 transition-all">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 space-y-4 hover:-translate-y-1">
               <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-[#d4af37]">
                 <Briefcase className="w-5 h-5" />
               </div>
@@ -317,7 +365,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 EXPLORE DEALER GIFTS <ArrowRight className="w-3.5 h-3.5" />
               </button>
-            </div>
+            </GlowCard>
 
           </div>
         </div>
@@ -501,7 +549,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Catalogue 1 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/60 rounded-xl p-6 flex flex-col justify-between space-y-6">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 flex flex-col justify-between space-y-6">
               <div>
                 <span className="px-2.5 py-1 bg-[#d4af37]/10 text-[#d4af37] text-[10px] font-mono font-bold uppercase rounded border border-[#d4af37]/30">
                   CATALOGUE 01
@@ -520,10 +568,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   VIEW CATALOGUE
                 </button>
               </div>
-            </div>
+            </GlowCard>
 
             {/* Catalogue 2 */}
-            <div className="bg-[#171717] border border-[#262626] hover:border-[#d4af37]/60 rounded-xl p-6 flex flex-col justify-between space-y-6">
+            <GlowCard className="bg-[#171717] border border-[#262626] rounded-xl p-6 flex flex-col justify-between space-y-6">
               <div>
                 <span className="px-2.5 py-1 bg-[#d4af37]/10 text-[#d4af37] text-[10px] font-mono font-bold uppercase rounded border border-[#d4af37]/30">
                   CATALOGUE 02
@@ -542,7 +590,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   VIEW CATALOGUE
                 </button>
               </div>
-            </div>
+            </GlowCard>
           </div>
         </div>
       </section>
@@ -555,7 +603,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
+          <GlowCard className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
             <h3 className="text-sm font-serif font-bold text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
               Curated Range
@@ -563,9 +611,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <p className="text-xs text-[#a3a3a3]">
               A broad selection of tested corporate gifting products curated specifically for professional environments.
             </p>
-          </div>
+          </GlowCard>
 
-          <div className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
+          <GlowCard className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
             <h3 className="text-sm font-serif font-bold text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
               Premium Selection
@@ -573,9 +621,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <p className="text-xs text-[#a3a3a3]">
               Products selected for professional gifting requirements with high-grade finishes and durability.
             </p>
-          </div>
+          </GlowCard>
 
-          <div className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
+          <GlowCard className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
             <h3 className="text-sm font-serif font-bold text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
               Custom Branding
@@ -583,9 +631,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <p className="text-xs text-[#a3a3a3]">
               Corporate logo customization options including laser engraving, debossing, and custom gift boxes.
             </p>
-          </div>
+          </GlowCard>
 
-          <div className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
+          <GlowCard className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
             <h3 className="text-sm font-serif font-bold text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
               Bulk Orders
@@ -593,9 +641,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <p className="text-xs text-[#a3a3a3]">
               Engineered for organizational, corporate procurement, and large-scale enterprise timelines.
             </p>
-          </div>
+          </GlowCard>
 
-          <div className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
+          <GlowCard className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
             <h3 className="text-sm font-serif font-bold text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
               Multiple Gifting Solutions
@@ -603,9 +651,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <p className="text-xs text-[#a3a3a3]">
               Employee welcome kits, client appreciation, executive gifting, corporate events, and festive occasions.
             </p>
-          </div>
+          </GlowCard>
 
-          <div className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
+          <GlowCard className="p-6 bg-[#171717] border border-[#262626] rounded-xl space-y-2">
             <h3 className="text-sm font-serif font-bold text-white flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
               Professional Support
@@ -613,7 +661,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <p className="text-xs text-[#a3a3a3]">
               Dedicated account managers to help customers select the right products for their precise budgets and specifications.
             </p>
-          </div>
+          </GlowCard>
         </div>
       </section>
 

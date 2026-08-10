@@ -16,11 +16,14 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
   const [corporateDropdownOpen, setCorporateDropdownOpen] = useState(false);
   const { openQuoteModal } = useQuoteModal();
 
+  const [mobileCategoriesOpen, setMobileCategoriesOpen] = useState(false);
+
   const handleNav = (path: string) => {
     onNavigate(path);
     setMobileMenuOpen(false);
     setProductsDropdownOpen(false);
     setCorporateDropdownOpen(false);
+    setMobileCategoriesOpen(false);
   };
 
   return (
@@ -219,58 +222,104 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#171717] border-b border-[#262626] px-4 py-6 space-y-4 text-sm font-sans animate-fade-in">
+        <div className="lg:hidden bg-[#171717] border-b border-[#262626] px-4 py-6 space-y-2 text-sm font-sans animate-fade-in max-h-[80vh] overflow-y-auto">
           <button
             onClick={() => handleNav('/')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
+            className="w-full text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] flex items-center"
           >
             Home
           </button>
-          <button
-            onClick={() => handleNav('/products')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
-          >
-            Products Catalogue
-          </button>
-          <button
-            onClick={() => handleNav('/corporate-gifting')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
-          >
-            Corporate Solutions
-          </button>
-          <button
-            onClick={() => handleNav('/employee-welcome-kits')}
-            className="block w-full text-left py-2 pl-4 text-[#a3a3a3] hover:text-[#d4af37]"
-          >
-            • Employee Welcome Kits
-          </button>
-          <button
-            onClick={() => handleNav('/executive-gifts')}
-            className="block w-full text-left py-2 pl-4 text-[#a3a3a3] hover:text-[#d4af37]"
-          >
-            • Executive & VIP Gifts
-          </button>
+
+          <div className="border-t border-[#262626]/50 pt-1">
+            <div className="flex items-center justify-between">
+              <button
+                onClick={() => handleNav('/products')}
+                className="text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] flex-1 min-h-[44px] flex items-center"
+              >
+                Products Catalogue
+              </button>
+              <button
+                onClick={() => setMobileCategoriesOpen(!mobileCategoriesOpen)}
+                className="p-2 text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] min-w-[44px] flex items-center justify-center"
+                aria-label="Toggle categories"
+              >
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileCategoriesOpen ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+
+            {/* Mobile Categories Sublist */}
+            {mobileCategoriesOpen && (
+              <div className="pl-3 pr-1 py-1 space-y-1 bg-[#121212] rounded-lg my-1 border border-[#262626] max-h-60 overflow-y-auto">
+                <button
+                  onClick={() => handleNav('/products')}
+                  className="w-full text-left py-2 px-2 text-xs font-bold text-[#d4af37] hover:bg-[#262626] rounded flex items-center gap-2"
+                >
+                  <Layers className="w-3.5 h-3.5" />
+                  All Products
+                </button>
+                {CATEGORIES.map(cat => (
+                  <button
+                    key={cat.slug}
+                    onClick={() => handleNav(`/collections/${cat.slug}`)}
+                    className="w-full text-left py-1.5 px-2 text-xs text-[#a3a3a3] hover:text-white hover:bg-[#262626] rounded truncate"
+                  >
+                    • {cat.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="border-t border-[#262626]/50 pt-1">
+            <button
+              onClick={() => handleNav('/corporate-gifting')}
+              className="w-full text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] flex items-center"
+            >
+              Corporate Solutions
+            </button>
+            <div className="pl-3 space-y-1">
+              <button
+                onClick={() => handleNav('/employee-welcome-kits')}
+                className="w-full text-left py-2 px-2 text-xs text-[#a3a3a3] hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[40px] flex items-center"
+              >
+                • Employee Welcome Kits
+              </button>
+              <button
+                onClick={() => handleNav('/executive-gifts')}
+                className="w-full text-left py-2 px-2 text-xs text-[#a3a3a3] hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[40px] flex items-center"
+              >
+                • Executive & VIP Gifts
+              </button>
+              <button
+                onClick={() => handleNav('/festive-gifting')}
+                className="w-full text-left py-2 px-2 text-xs text-[#a3a3a3] hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[40px] flex items-center"
+              >
+                • Festive Corporate Gifting
+              </button>
+            </div>
+          </div>
+
           <button
             onClick={() => handleNav('/custom-branding')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
+            className="w-full text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] flex items-center"
           >
             Custom Branding
           </button>
           <button
             onClick={() => handleNav('/catalogue')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
+            className="w-full text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] flex items-center"
           >
             Digital Catalogues
           </button>
           <button
             onClick={() => handleNav('/about')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
+            className="w-full text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] flex items-center"
           >
             About Us
           </button>
           <button
             onClick={() => handleNav('/contact')}
-            className="block w-full text-left py-2 text-white font-medium hover:text-[#d4af37]"
+            className="w-full text-left py-2.5 px-2 text-white font-medium hover:text-[#d4af37] hover:bg-[#262626] rounded min-h-[44px] flex items-center"
           >
             Contact
           </button>
@@ -281,7 +330,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
                 setMobileMenuOpen(false);
                 openQuoteModal(null);
               }}
-              className="w-full py-3 bg-[#d4af37] text-black font-bold text-xs tracking-wider uppercase rounded flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-[#d4af37] text-black font-bold text-xs tracking-wider uppercase rounded flex items-center justify-center gap-2 shadow-lg min-h-[44px]"
             >
               <FileText className="w-4 h-4" />
               REQUEST A QUOTE

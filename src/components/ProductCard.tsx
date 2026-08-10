@@ -75,7 +75,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onNavigate })
           <div className="grid grid-cols-2 gap-2 pt-1">
             <button
               onClick={() => onNavigate(`/product/${product.id}`)}
-              className="w-full py-2 bg-[#262626] hover:bg-[#333] text-white text-[10px] font-semibold tracking-wider uppercase rounded transition-colors flex items-center justify-center gap-1 border border-[#333]"
+              className="w-full py-2.5 sm:py-2 bg-[#262626] hover:bg-[#333] active:bg-[#404040] text-white text-[10px] font-semibold tracking-wider uppercase rounded transition-colors flex items-center justify-center gap-1 border border-[#333] min-h-[38px]"
             >
               <Eye className="w-3 h-3" />
               Details
@@ -83,7 +83,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onNavigate })
 
             <button
               onClick={() => openQuoteModal(product)}
-              className="w-full py-2 bg-[#d4af37] hover:bg-[#c5a028] text-black text-[10px] font-bold tracking-wider uppercase rounded transition-colors flex items-center justify-center gap-1 shadow"
+              className="w-full py-2.5 sm:py-2 bg-[#d4af37] hover:bg-[#c5a028] active:bg-[#b8860b] text-black text-[10px] font-bold tracking-wider uppercase rounded transition-colors flex items-center justify-center gap-1 shadow min-h-[38px]"
             >
               <FileText className="w-3 h-3" />
               Quote

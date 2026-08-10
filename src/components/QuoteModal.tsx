@@ -60,28 +60,29 @@ export const QuoteModal: React.FC = () => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fade-in">
       <div className="relative w-full max-w-2xl bg-[#171717] border border-[#d4af37]/30 rounded-xl shadow-2xl overflow-hidden text-[#e5e5e5] max-h-[90vh] flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 bg-[#0a0a0a] border-b border-[#262626]">
-          <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 bg-[#0a0a0a] border-b border-[#262626]">
+          <div className="flex items-center gap-2.5 sm:gap-3">
             <BrandLogo variant="monogram" size="sm" />
             <div>
-              <h2 className="text-lg font-serif text-[#f5f5f5] tracking-wide font-bold">
+              <h2 className="text-sm sm:text-lg font-serif text-[#f5f5f5] tracking-wide font-bold">
                 REQUEST A CORPORATE QUOTE
               </h2>
-              <p className="text-[10px] text-[#d4af37] font-mono tracking-wider uppercase">
+              <p className="text-[9px] sm:text-[10px] text-[#d4af37] font-mono tracking-wider uppercase">
                 THE GIFTING HOUSE • CUSTOM B2B PROPOSAL
               </p>
             </div>
           </div>
           <button 
             onClick={closeQuoteModal}
-            className="p-1.5 rounded-full hover:bg-[#262626] text-[#a3a3a3] hover:text-white transition-colors"
+            className="p-2 rounded-full hover:bg-[#262626] text-[#a3a3a3] hover:text-white transition-colors min-h-[40px] min-w-[40px] flex items-center justify-center"
+            aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 overflow-y-auto flex-1">
+        <div className="p-4 sm:p-6 overflow-y-auto flex-1">
           {submitted ? (
             <div className="text-center py-10 space-y-4">
               <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]">

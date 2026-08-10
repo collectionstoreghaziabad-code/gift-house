@@ -17,6 +17,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, initialC
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'name'>('featured');
   const [onlyCustomizable, setOnlyCustomizable] = useState(false);
   const [onlyPremium, setOnlyPremium] = useState(false);
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   // Extract unique materials and use cases dynamically
   const materials = useMemo(() => {
@@ -93,10 +94,26 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, initialC
         </p>
       </div>
 
+      {/* Mobile Filter Toggle Button */}
+      <div className="max-w-7xl mx-auto lg:hidden">
+        <button
+          onClick={() => setShowMobileFilters(!showMobileFilters)}
+          className="w-full py-3 px-4 bg-[#141414] border border-[#262626] hover:border-[#d4af37]/60 text-white rounded-xl font-semibold text-xs flex items-center justify-between"
+        >
+          <span className="flex items-center gap-2">
+            <Filter className="w-4 h-4 text-[#d4af37]" />
+            Catalogue Filters {selectedCategory || selectedUseCase || selectedMaterial || search || onlyCustomizable || onlyPremium ? '(Active)' : ''}
+          </span>
+          <span className="text-[#d4af37] text-xs underline font-normal">
+            {showMobileFilters ? 'Hide Filters ▲' : 'Show Filters ▼'}
+          </span>
+        </button>
+      </div>
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* Left Sidebar Filters */}
-        <div className="lg:col-span-3 bg-[#141414] border border-[#262626] rounded-xl p-5 space-y-6 sticky top-24">
+        <div className={`lg:col-span-3 bg-[#141414] border border-[#262626] rounded-xl p-5 space-y-6 lg:sticky lg:top-24 ${showMobileFilters ? 'block' : 'hidden lg:block'}`}>
           <div className="flex items-center justify-between border-b border-[#262626] pb-3">
             <h2 className="font-serif text-sm font-bold text-white flex items-center gap-2">
               <Filter className="w-4 h-4 text-[#d4af37]" />
@@ -235,7 +252,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, initialC
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
               {filteredProducts.map(product => (
                 <ProductCard key={product.id} product={product} onNavigate={onNavigate} />
               ))}

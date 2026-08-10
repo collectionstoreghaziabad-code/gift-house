@@ -178,7 +178,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Instagram (@thegiftinghouse_) <ArrowUpRight className="w-3 h-3 text-[#E1306C]" />
             </a>
             <a 
-              href="https://www.linkedin.com/in/tgh-the-gift-house-159174428/" 
+              href="https://www.linkedin.com/in/the-gifting-house-159174428/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-[#0A66C2] transition-colors"

@@ -50,30 +50,31 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose, onNav
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/80 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-12 sm:pt-20 px-3 sm:px-4 bg-black/80 backdrop-blur-md animate-fade-in">
       <div className="relative w-full max-w-2xl bg-[#171717] border border-[#d4af37]/40 rounded-xl shadow-2xl overflow-hidden text-[#e5e5e5]">
         {/* Search Input Bar */}
-        <div className="relative flex items-center px-4 py-3 bg-[#0a0a0a] border-b border-[#262626]">
-          <Search className="w-5 h-5 text-[#d4af37] mr-3" />
+        <div className="relative flex items-center px-3 sm:px-4 py-3 bg-[#0a0a0a] border-b border-[#262626]">
+          <Search className="w-5 h-5 text-[#d4af37] mr-2.5 flex-shrink-0" />
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search products by name, code (e.g. TGH-25, BH-1), material, or category..."
+            placeholder="Search products by name, code (e.g. TGH-25), material..."
             value={query}
             onChange={e => setQuery(e.target.value)}
-            className="w-full bg-transparent text-white font-sans text-sm outline-none placeholder-[#737373]"
+            className="w-full bg-transparent text-white font-sans text-xs sm:text-sm outline-none placeholder-[#737373]"
           />
           {query && (
             <button 
               onClick={() => setQuery('')}
-              className="p-1 rounded text-[#a3a3a3] hover:text-white mr-2"
+              className="p-1.5 rounded text-[#a3a3a3] hover:text-white mr-1 text-xs min-h-[36px]"
             >
               Clear
             </button>
           )}
           <button 
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-[#262626] text-[#a3a3a3] hover:text-white transition-colors"
+            className="p-2 rounded-full hover:bg-[#262626] text-[#a3a3a3] hover:text-white transition-colors min-h-[40px] min-w-[40px] flex items-center justify-center flex-shrink-0"
+            aria-label="Close search"
           >
             <X className="w-5 h-5" />
           </button>

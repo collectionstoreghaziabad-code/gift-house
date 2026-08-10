@@ -73,12 +73,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId,
           </div>
 
           {product.images.length > 1 && (
-            <div className="flex gap-3 overflow-x-auto pb-2">
+            <div className="flex gap-3 overflow-x-auto pb-2 snap-x scrollbar-thin">
               {product.images.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveImageIndex(idx)}
-                  className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${activeImageIndex === idx ? 'border-[#d4af37]' : 'border-[#262626] opacity-60 hover:opacity-100'}`}
+                  className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 snap-start min-h-[44px] ${activeImageIndex === idx ? 'border-[#d4af37]' : 'border-[#262626] opacity-60 hover:opacity-100'}`}
                 >
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </button>

@@ -117,7 +117,7 @@ export const ContactPage: React.FC = () => {
               <div className="font-semibold text-white text-xs uppercase tracking-wider text-[#d4af37]">
                 Connect With Us On Social Media
               </div>
-              <div className="grid grid-cols-2 gap-2 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                 <a
                   href="https://www.instagram.com/thegiftinghouse_?igsh=ZTJ1ODlhZHFuMHA="
                   target="_blank"
@@ -137,7 +137,7 @@ export const ContactPage: React.FC = () => {
                   <span className="text-[10px] font-mono text-[#737373]">Page</span>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/tgh-the-gift-house-159174428/"
+                  href="https://www.linkedin.com/in/the-gifting-house-159174428/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 bg-[#141414] hover:bg-[#1f1f1f] border border-[#262626] rounded flex items-center justify-between text-[#e5e5e5] hover:text-[#0A66C2] transition-colors"
