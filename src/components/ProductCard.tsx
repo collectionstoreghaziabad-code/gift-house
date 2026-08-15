@@ -15,13 +15,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onNavigate })
     <div className="group relative bg-[#171717] border border-[#262626] hover:border-[#d4af37]/60 rounded-xl overflow-hidden shadow-lg transition-all duration-300 flex flex-col h-full hover:-translate-y-1">
       {/* Product Image Container */}
       <div 
-        className="relative aspect-square w-full bg-[#0a0a0a] overflow-hidden cursor-pointer"
+        className="relative aspect-square w-full bg-[#111111] overflow-hidden cursor-pointer flex items-center justify-center p-3 sm:p-4"
         onClick={() => onNavigate(`/product/${product.id}`)}
       >
         <img
           src={product.images[0]}
           alt={product.name}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+          className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 opacity-95 group-hover:opacity-100"
           loading="lazy"
         />
 

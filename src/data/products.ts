@@ -1,5 +1,50 @@
 import { Product } from '../types';
 
+import imgTgh1 from '../assets/images/regenerated_image_1786799731136.png';
+import imgTgh3 from '../assets/images/regenerated_image_1786811378997.png';
+import imgTgh4 from '../assets/images/regenerated_image_1786811374949.png';
+import imgTgh5 from '../assets/images/regenerated_image_1786811383343.png';
+import imgTgh6 from '../assets/images/regenerated_image_1786799735061.png';
+import imgTgh7 from '../assets/images/regenerated_image_1786811388047.png';
+import imgTgh8 from '../assets/images/regenerated_image_1786811392118.png';
+import imgTgh10 from '../assets/images/regenerated_image_1786811396161.png';
+import imgTgh11 from '../assets/images/regenerated_image_1786811399561.png';
+import imgTgh12 from '../assets/images/regenerated_image_1786799739086.png';
+import imgTgh13 from '../assets/images/regenerated_image_1786811403707.png';
+import imgTgh14 from '../assets/images/regenerated_image_1786811407305.png';
+import imgTgh15 from '../assets/images/regenerated_image_1786812596988.png';
+import imgTgh16 from '../assets/images/regenerated_image_1786811417820.png';
+import imgTgh17 from '../assets/images/regenerated_image_1786811422143.png';
+import imgTgh18 from '../assets/images/regenerated_image_1786811426436.png';
+import imgTgh19 from '../assets/images/regenerated_image_1786799744291.png';
+import imgTgh20 from '../assets/images/regenerated_image_1786811430451.png';
+import imgTgh21 from '../assets/images/regenerated_image_1786812593399.png';
+import imgTgh22 from '../assets/images/regenerated_image_1786812165218.png';
+import imgTgh23 from '../assets/images/regenerated_image_1786812169469.png';
+import imgTgh24 from '../assets/images/regenerated_image_1786799748440.png';
+import imgTgh25 from '../assets/images/regenerated_image_1786812174114.png';
+import imgTgh26 from '../assets/images/regenerated_image_1786812178678.png';
+import imgTgh27 from '../assets/images/regenerated_image_1786812183711.png';
+import imgTgh28 from '../assets/images/regenerated_image_1786799752255.png';
+import imgTgh29 from '../assets/images/regenerated_image_1786812188345.png';
+import imgTgh30 from '../assets/images/regenerated_image_1786812193479.png';
+import imgTgh31 from '../assets/images/regenerated_image_1786812198253.png';
+import imgTgh32 from '../assets/images/regenerated_image_1786812202837.png';
+import imgTgh33 from '../assets/images/regenerated_image_1786812206429.png';
+import imgTgh34 from '../assets/images/regenerated_image_1786812210012.png';
+import imgTgh35 from '../assets/images/regenerated_image_1786812213603.png';
+import imgTgh36 from '../assets/images/regenerated_image_1786799756924.png';
+import imgTgh37 from '../assets/images/regenerated_image_1786812219052.png';
+import imgTgh38 from '../assets/images/regenerated_image_1786812223193.png';
+import imgTgh39 from '../assets/images/regenerated_image_1786812227064.png';
+import imgTgh40 from '../assets/images/regenerated_image_1786812235912.png';
+import imgTgh41 from '../assets/images/regenerated_image_1786812231224.png';
+import imgTgh42 from '../assets/images/regenerated_image_1786812239626.png';
+import imgTgh43 from '../assets/images/regenerated_image_1786812243658.png';
+import imgTgh44 from '../assets/images/regenerated_image_1786812247544.png';
+import imgTgh45 from '../assets/images/regenerated_image_1786812250750.png';
+import imgTgh46 from '../assets/images/regenerated_image_1786812253936.jpg';
+
 export const PRODUCTS: Product[] = [
   // ================= BOTTLES, FLASKS & TUMBLERS (TGH-1 to TGH-18) =================
   {
@@ -10,7 +55,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 649,
     description: 'Double-walled stainless steel vacuum insulated bottle with leak-proof cap. Retains hot & cold temperatures for up to 18 hours.',
-    images: ['https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh1, 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isCustomizable: true,
     useCases: ['Employee', 'Client', 'Event', 'Welcome Kit'],
@@ -40,7 +85,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 949,
     description: 'Heavy duty tactical thermal flask with ergonomic carry handle and push-button spout.',
-    images: ['https://images.unsplash.com/photo-1523362622742-82590d69225f?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh3, 'https://images.unsplash.com/photo-1523362622742-82590d69225f?auto=format&fit=crop&q=80&w=800'],
     isPremium: true,
     isCustomizable: true,
     useCases: ['Executive', 'Client'],
@@ -55,7 +100,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 949,
     description: 'Minimalist powder-coated insulated water bottle with integrated silicone handle.',
-    images: ['https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh4, 'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Welcome Kit'],
     material: 'Stainless Steel',
@@ -69,7 +114,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 249,
     description: 'BPA-free high-impact sports bottle with volume gradient markings and quick flip cap.',
-    images: ['https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh5, 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Event', 'Promotional'],
     material: 'BPA-Free Plastic / Tritan',
@@ -83,7 +128,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 1299,
     description: 'Executive 40oz insulated travel tumbler with sturdy handle, straw opening, and car-cup compatible tapered base.',
-    images: ['https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh6, 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isPremium: true,
     isCustomizable: true,
@@ -99,7 +144,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 1049,
     description: 'Pastel series vacuum insulated bottle with metallic cap ring and sweat-proof powder coating.',
-    images: ['https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh7, 'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Stainless Steel',
@@ -113,7 +158,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 649,
     description: 'Classic metallic body vacuum flask with integrated screw-on sipping cup.',
-    images: ['https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh8, 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Stainless Steel',
@@ -141,7 +186,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 699,
     description: 'Desk-friendly vacuum tumbler with pop-up silicone straw cap and tactile grip band.',
-    images: ['https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh10, 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Stainless Steel',
@@ -155,7 +200,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 699,
     description: 'Duo tone typography series vacuum flask with leakproof seal.',
-    images: ['https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh11, 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event'],
     material: 'Stainless Steel',
@@ -169,7 +214,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 449,
     description: 'Complete travel gift box featuring a 500ml vacuum flask with 2 matching stainless steel cups.',
-    images: ['https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh12, 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isCustomizable: true,
     useCases: ['Festive', 'Client', 'Employee'],
@@ -184,7 +229,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 129,
     description: 'Borosilicate clear glass tumbler with dual-use sip and straw lid and heat-resistant silicone sleeve.',
-    images: ['https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh13, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Promotional', 'Event'],
     material: 'Borosilicate Glass',
@@ -198,7 +243,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 149,
     description: 'Insulated double-wall glass coffee mug with stainless steel tea infuser insert.',
-    images: ['https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh14, 'https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Glass / Stainless Steel',
@@ -212,7 +257,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 399,
     description: 'Tapered office coffee tumbler with splash-proof lid.',
-    images: ['https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh15, 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Promotional'],
     material: 'Stainless Steel',
@@ -226,7 +271,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 299,
     description: 'Textured diamond-faceted stainless steel mug with ergonomic comfort handle and lid.',
-    images: ['https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh16, 'https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Welcome Kit'],
     material: 'Stainless Steel',
@@ -240,7 +285,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 299,
     description: 'Eco-conscious glass tumbler featuring a natural insulating cork collar and flip-top lid.',
-    images: ['https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh17, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event'],
     material: 'Glass / Cork',
@@ -254,7 +299,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Bottles, Flasks & Tumblers',
     price: 349,
     description: 'Matte ceramic desk coffee mug with natural cork base bottom to protect wooden desk surfaces.',
-    images: ['https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh18, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Ceramic / Cork',
@@ -270,7 +315,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Diaries & Notebooks',
     price: 275,
     description: 'A5 hardbound journal featuring an embossed metallic stag icon emblem and magnetic clasp closure.',
-    images: ['https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh19, 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isCustomizable: true,
     useCases: ['Executive', 'Employee', 'Welcome Kit'],
@@ -285,7 +330,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Diaries & Notebooks',
     price: 225,
     description: 'Textured leatherette notebook equipped with built-in metal pen holder loop and metal accent pen.',
-    images: ['https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh20, 'https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event', 'Welcome Kit'],
     material: 'Leatherette',
@@ -299,7 +344,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Diaries & Notebooks',
     price: 249,
     description: 'Classic Concise notebook with rich leatherette finish, bookmark ribbon, and expandable back pocket.',
-    images: ['https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh21, 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Leatherette',
@@ -313,7 +358,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Diaries & Notebooks',
     price: 349,
     description: 'Premium cross-textured corporate planner with brushed steel logo magnetic clasp.',
-    images: ['https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh22, 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=800'],
     isPremium: true,
     isCustomizable: true,
     useCases: ['Executive', 'Client', 'Festive'],
@@ -328,7 +373,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Diaries & Notebooks',
     price: 179,
     description: 'Vibrant color-coordinated hardcover A5 notebook with contrast elastic band closure.',
-    images: ['https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh23, 'https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event', 'Promotional'],
     material: 'Hardbound Paper / PU',
@@ -342,7 +387,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Diaries & Notebooks',
     price: 479,
     description: 'Luxurious gift-boxed corporate diary set complete with custom metallic rollerball pen.',
-    images: ['https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh24, 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isPremium: true,
     isCustomizable: true,
@@ -360,7 +405,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Premium Pens',
     price: 69,
     description: 'Sleek metal barrel ballpoint pen available in vibrant lacquered executive colors.',
-    images: ['https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh25, 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event', 'Welcome Kit', 'Promotional'],
     material: 'Metal',
@@ -374,7 +419,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Premium Pens',
     price: 79,
     description: 'Slimline metallic pen with gold accent trims and smooth German ink refill.',
-    images: ['https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh26, 'https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Metal / Gold Plated Clip',
@@ -388,7 +433,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Premium Pens',
     price: 79,
     description: 'Weighted black and gold rollerball pen designed for signature ease and smooth ink flow.',
-    images: ['https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh27, 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Executive', 'Client'],
     material: 'Brass / Matte Lacquer',
@@ -402,7 +447,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Premium Pens',
     price: 125,
     description: 'Official Parker series rollerball pen in presentation gift casing.',
-    images: ['https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh28, 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isPremium: true,
     isCustomizable: true,
@@ -418,7 +463,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Premium Pens',
     price: 179,
     description: 'Eco-friendly hybrid metal and bamboo body pen presented in a matching wooden gift box.',
-    images: ['https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh29, 'https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Executive', 'Client'],
     material: 'Bamboo / Recycled Metal',
@@ -432,7 +477,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Premium Pens',
     price: 49,
     description: 'High durability corporate ball pen suitable for laser engraving brand slogans.',
-    images: ['https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh30, 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Promotional', 'Event', 'Welcome Kit'],
     material: 'Aluminum',
@@ -448,7 +493,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 399,
     description: 'Multi-slot desk organizer with integrated phone holder, business card stand, and pen tumbler.',
-    images: ['https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh31, 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Welcome Kit'],
     material: 'Leatherette',
@@ -462,7 +507,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 249,
     description: 'Foldable metal mesh desktop stand for mobile phones and tablet devices.',
-    images: ['https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh32, 'https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event'],
     material: 'Metal Alloy',
@@ -476,7 +521,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 275,
     description: 'Crafted natural pine wood desktop organizer with analog clock face and pen holder.',
-    images: ['https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh33, 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Executive', 'Client'],
     material: 'Natural Wood',
@@ -490,7 +535,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 275,
     description: 'Natural bamboo double compartment stationery holder with photo frame front slot.',
-    images: ['https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh34, 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client'],
     material: 'Bamboo',
@@ -504,7 +549,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 425,
     description: 'Perpetual wooden cube calendar with magnetic date blocks and memo clip.',
-    images: ['https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh35, 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Client', 'Executive', 'Festive'],
     material: 'Wood / Metal',
@@ -518,7 +563,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 749,
     description: 'Modern LED desk lamp featuring touch brightness controls and 15W fast wireless charging pad base.',
-    images: ['https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh36, 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800'],
     isFeatured: true,
     isPremium: true,
     isCustomizable: true,
@@ -534,7 +579,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 249,
     description: 'Natural bamboo casing multi-head charging cable supporting Type-C, Lightning, and Micro USB.',
-    images: ['https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh37, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Welcome Kit'],
     material: 'Bamboo / Nylon Braided Cable',
@@ -548,7 +593,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 199,
     description: 'Tangle-free retractable cable reel with universal 3-in-1 output tips.',
-    images: ['https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh38, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Promotional', 'Event', 'Welcome Kit'],
     material: 'ABS / TPE',
@@ -562,7 +607,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 149,
     description: 'Compact travel case equipped with Type-C to Type-C fast cable, SIM ejector tool, and adapters.',
-    images: ['https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh39, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Welcome Kit'],
     material: 'Polycarbonate Case',
@@ -576,7 +621,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 299,
     description: 'International travel plug adapter with dual USB ports compatible with 150+ countries.',
-    images: ['https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh40, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Executive', 'Client'],
     material: 'Fire Retardant PC',
@@ -590,7 +635,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 449,
     description: 'Ergonomic 2.4GHz wireless optical mouse handcrafted from genuine eco bamboo.',
-    images: ['https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh41, 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Executive', 'Client'],
     material: 'Natural Bamboo',
@@ -604,7 +649,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Desk & Tech Accessories',
     price: 475,
     description: 'High-speed 30W Type-C PD + USB-A multi-region universal power converter.',
-    images: ['https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh42, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=800'],
     isPremium: true,
     isCustomizable: true,
     useCases: ['Executive', 'VIP'],
@@ -621,7 +666,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Miscellaneous Corporate Items',
     price: 349,
     description: 'Acrylic crystal diamond touch-control LED table lamp with RGB color changing modes.',
-    images: ['https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh43, 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Festive', 'Employee'],
     material: 'Acrylic Crystal',
@@ -635,7 +680,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Miscellaneous Corporate Items',
     price: 779,
     description: 'Sleek brushed champagne gold cordless restaurant & hotel bedside LED lamp with dimmable warmth.',
-    images: ['https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh44, 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=800'],
     isPremium: true,
     isCustomizable: true,
     useCases: ['Executive', 'VIP', 'Client'],
@@ -650,7 +695,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Miscellaneous Corporate Items',
     price: 199,
     description: 'Pastel folder clipboard with built-in document storage compartment and snap latch lock.',
-    images: ['https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh45, 'https://images.unsplash.com/photo-1585336261026-8f5786372969?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Event'],
     material: 'PP Polymer',
@@ -664,7 +709,7 @@ export const PRODUCTS: Product[] = [
     categoryName: 'Miscellaneous Corporate Items',
     price: 379,
     description: 'Windproof 3-fold automatic open & close umbrella with high-density UV protection canopy.',
-    images: ['https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&q=80&w=800'],
+    images: [imgTgh46, 'https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&q=80&w=800'],
     isCustomizable: true,
     useCases: ['Employee', 'Client', 'Promotional'],
     material: 'Pongee Fabric / Fiberglass Frame',

@@ -61,13 +61,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId,
         
         {/* LEFT: Image Gallery */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="relative aspect-square w-full bg-[#141414] border border-[#262626] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center p-4">
+          <div className="relative aspect-square w-full bg-[#111111] border border-[#262626] rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center p-6 sm:p-8">
             <img 
               src={product.images[activeImageIndex] || product.images[0]} 
               alt={product.name} 
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-contain rounded-lg transition-all duration-300"
             />
-            <span className="absolute top-4 left-4 px-3 py-1 bg-black/80 backdrop-blur-md text-[#d4af37] font-mono font-bold text-xs rounded border border-[#d4af37]/40 shadow">
+            <span className="absolute top-4 left-4 px-3 py-1 bg-black/80 backdrop-blur-md text-[#d4af37] font-mono font-bold text-xs rounded border border-[#d4af37]/40 shadow z-10">
               CODE: {product.code}
             </span>
           </div>
@@ -78,9 +78,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId,
                 <button
                   key={idx}
                   onClick={() => setActiveImageIndex(idx)}
-                  className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 snap-start min-h-[44px] ${activeImageIndex === idx ? 'border-[#d4af37]' : 'border-[#262626] opacity-60 hover:opacity-100'}`}
+                  className={`w-20 h-20 rounded-lg overflow-hidden border-2 p-1.5 bg-[#111111] transition-all flex-shrink-0 snap-start flex items-center justify-center min-h-[44px] ${activeImageIndex === idx ? 'border-[#d4af37]' : 'border-[#262626] opacity-60 hover:opacity-100'}`}
                 >
-                  <img src={img} alt="" className="w-full h-full object-cover" />
+                  <img src={img} alt="" className="w-full h-full object-contain" />
                 </button>
               ))}
             </div>
